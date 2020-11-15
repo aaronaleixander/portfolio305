@@ -1,0 +1,33 @@
+#heroimage{
+    max-width: 100%;
+    height: auto;
+}
+
+.about-me{
+    width: 250px;
+}
+
+.experience-text {
+    width: 500px;
+}
+
+
+/**************
+GUESTBOOK CSS
+**************/
+#html-guestbook{
+    background: url(/305/portfolio/images/esthetic_clouds.jpeg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.jumbotron{
+    background-color: white;
+}
+
+.form-div{
+    background-color: white;
+}
+
+#guestbook-form{
+
+}
