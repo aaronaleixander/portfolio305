@@ -9,6 +9,7 @@ if(empty($_POST)){
 }
 
 require ('includes/dbcreds.php'); // if file not found, terminate
+require('includes/guestbookFunctions.php');
 ?>
 
 <!doctype html>
@@ -65,18 +66,83 @@ require ('includes/dbcreds.php'); // if file not found, terminate
     </div> <!-- CLOSING DIV FOR JUMBOTRON -->
 
     <?php
-    $fname = $_POST['first-name'];
-    $lname = $_POST['last-name'];
+    // SERVER-SIDE VALIDATION
+    $isValid = true;
+
+    // first name
+    if(validName($_POST['first-name'])){
+        $fname = $_POST['first-name'];
+    } else{
+        echo "<p>Please enter your first name.</p>";
+        $isValid = false;
+    }
+
+    // last name
+    if(validName($_POST['last-name'])){
+        $lname = $_POST['last-name'];
+    } else{
+        echo "<p>Please enter your last name.</p>";
+        $isValid = false;
+    }
+
+    // email
+    if(validEmail($_POST['email'])){
+        $email = $_POST['email'];
+    } else{
+        echo "<p>Please enter a valid email address.</p>";
+        $isValid = false;
+    }
+
+    // phone number
+    if(validPhoneNumber($_POST['phone'])){
+        $phone = $_POST['phone'];
+    } else{
+        echo "<p>Please enter a valid phone number.</p>";
+        $isValid = false;
+    }
+
+    // if mailing list checkbox is checked -> email is required
+    if(isset($_POST['mailing-checkbox']) AND validMailingType($_POST['mailing-type'])){
+        if(validEmail($_POST['email'])){
+            $email = $_POST['email'];
+        } else{
+            echo "<p>Please enter a valid email address.</p>";
+            $isValid = false;
+        }
+    }
+
+/**
+    // if linked in url is entered must be valid format
+    if(!empty($_POST['linked-in'])){
+        if(validURL($_POST['linked-in'])) {
+            $linkedIn = $_POST['linked-in'];
+        } else {
+            echo "<p>Please enter a valid linked in url.</p>";
+            $isValid = false;
+        }
+    }
+  */
+
+
+    // how we met is required
+    if($_POST['how-we-met'] == 'none'){
+        echo"<p>How we met is required.</p>";
+        $isValid = false;
+    }
+
+    $linkedIn = $_POST['linked-in'];
     $company = $_POST['company'];
     $jobTitle = $_POST['job-title'];
-    $linkedIn = $_POST['linked-in'];
-    $email = $_POST['email'];
-    $phone = $_POST['phone'];
     $howWeMet = $_POST['how-we-met'];
     $howOther = $_POST['how-we-met'];
     $comments = $_POST['leave-comment'];
     $mailFormat = $_POST['mailing-type'];
     $submit_date = date("Y/m/d g:i a");
+
+    if(!$isValid){
+        echo "<p> ERROR!! Invalid entries try again.</p>";
+        return;
+    }
 
     $sql = "INSERT INTO guestbook(first_name, last_name, company, job_title, linked_in, 
                                 email, phone, how_we_met, comments, mail_format, submit_date) 
@@ -97,6 +163,14 @@ require ('includes/dbcreds.php'); // if file not found, terminate
         echo "<p>Sorry, something went wrong</p>";
         return;
     }
+
+    // Guestbook Summary
+    echo "Guestbook Contact Summary";
+    echo "<p>Name: $fname $lname</p>";
+    echo "<p>Email: $email</p>";
+    echo "<p>How we met: $howWeMet</p>";
+    echo "<p>Linked In: $linkedIn</p>"
+
     ?>
 
 

@@ -1,3 +1,9 @@
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background-color: #0c5460;
+    color: white !important;
+}
+
+
 #heroimage{
     max-width: 100%;
     height: auto;
@@ -10,6 +16,15 @@
 .experience-text {
     width: 500px;
 }
+
+.on-hover{
+    transition: transform .2s;
+}
+
+.on-hover:hover {
+    transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
 
 
 /**************

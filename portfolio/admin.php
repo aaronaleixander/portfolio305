@@ -2,8 +2,18 @@
 // set error reporting
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
+
 // includes
 require ('includes/dbcreds.php'); // database credentials
+
+// start session
+session_start();
+if(!isset($_SESSION['loggedin'])){
+    $_SESSION['page'] = $_SERVER['SCRIPT_URI']; // full path of the page you are currently on
+
+    // Redirect to login
+    header("location: login/login.php");
+}
 ?>
 
 <!doctype html>
@@ -29,17 +39,20 @@ require ('includes/dbcreds.php'); // database credentials
 -->
 <header class="bg-transparent">
     <nav class="navbar navbar-expand-lg navbar-light bg-transparent text-white sticky-top">
-        <a class="navbar-brand ml-5"  href="#"><img src="images/letterA01.png" height="50" width="50" alt="logo"></a>
+        <a class="navbar-brand ml-5"  href="https://autterback.greenriverdev.com/305/portfolio/landing.html"><img src="images/letterA01.png" height="50" width="50" alt="logo"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse justify-content-end mr-5" id="navbarNav">
+        <div class="collapse navbar-collapse justify-content-center mr-5" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link" href="">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="https://autterback.greenriverdev.com/305/portfolio/guestbook.html">Guestbook</a>
+                    <a class="nav-link " href="https://autterback.greenriverdev.com/305/portfolio/guestbook.html">Guestbook</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="https://autterback.greenriverdev.com/305/portfolio/login/logout.php">Logout</a>
                 </li>
             </ul>
         </div>
@@ -112,7 +125,6 @@ require ('includes/dbcreds.php'); // database credentials
         </table>
     </div>
 </div>
-
 
 
 

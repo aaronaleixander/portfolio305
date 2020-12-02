@@ -12,6 +12,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="styles/main.css">
 
+
     <title>Guestbook</title>
 </head>
 <body>
@@ -19,27 +20,24 @@
         HEADER
 -->
 <header class="bg-transparent">
-    <nav class="navbar navbar-expand-lg navbar-light bg-transparent text-white sticky-top">
-        <a class="navbar-brand ml-5"  href="#"><img src="images/letterA01.png" height="50" width="50" alt="logo"></a>
+    <nav class="navbar nav-pills navbar-expand-lg navbar-light">
+        <a class="navbar-brand ml-5"  href="https://autterback.greenriverdev.com/305/portfolio/landing.html"><img src="images/logo-portfolio.png" height="50" width="50" alt="logo"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse justify-content-end mr-5" id="navbarNav">
+        <div class="collapse navbar-collapse justify-content-center mr-5" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="">Home</a>
+                    <a class="nav-link" href="https://autterback.greenriverdev.com/305/portfolio/landing.html">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="https://autterback.greenriverdev.com/305/portfolio/resume.html">Resume</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="">Projects</a>
+                    <a class="nav-link rounded-pill active" href="https://autterback.greenriverdev.com/305/portfolio/guestbook.php">Guestbook</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="https://autterback.greenriverdev.com/305/portfolio/guestbook.html">Guestbook</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="https://autterback.greenriverdev.com/305/portfolio/admin.php">Admin</a>
+                    <a class="nav-link" href="https://autterback.greenriverdev.com/305/portfolio/admin.php">Admin</a>
                 </li>
             </ul>
         </div>
@@ -102,11 +100,11 @@
                     <fieldset class="fieldset">
                         <legend class="pl-3">How we connected: </legend>
                         <select class="form-control ml-3 col-4" id="how-we-met" name="how-we-met" >
-                            <option value='none-met'>How did we meet?</option>
-                            <option value='school-met'>School</option>
-                            <option value='linkedin-met'>Linked In</option>
-                            <option value='workshop-met'>Workshop</option>
-                            <option value='career-fair-met'>Career Fair</option>
+                            <option value='none'>How did we meet?</option>
+                            <option value='school'>School</option>
+                            <option value='linkedin'>Linked In</option>
+                            <option value='workshop'>Workshop</option>
+                            <option value='career-fair'>Career Fair</option>
                             <option value='other'>Other</option>
                         </select>
                         <span id="err-met" class="d-none text-danger">How we met is required :)</span>
@@ -123,7 +121,7 @@
             <fieldset class="fieldset">
                 <legend>Mailing list: </legend>
                 <div class="form-check mb-2">
-                    <input class="form-check-input" type="checkbox" value="" id="mailing-checkbox">
+                    <input class="form-check-input" type="checkbox" name="mailing-checkbox" id="mailing-checkbox">
                     <label class="form-check-label" for="mailing-checkbox">
                         Please add me to your mailing list
                     </label>
@@ -149,15 +147,13 @@
 
 
 
-
-
-
-
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
 <script src="scripts/main.js"></script>
+
 </body>
 </html>
