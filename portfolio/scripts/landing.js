@@ -2,8 +2,8 @@ $(document).ready(() => {
 
     var i = 0;
     var w = window.matchMedia("(min-width: 768px)");
-    var txt = "hi, i'm AAron i like to build websites & other things...";
-    var speed = 80;
+    var txt = "welcome to my portfolio hi, i'm AAron :]";
+    var speed = 90;
     function typeWriter() {
         if (i < txt.length) {
             document.getElementById("text").innerHTML += txt.charAt(i);

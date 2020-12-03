@@ -31,30 +31,28 @@ require('includes/guestbookFunctions.php');
 <!--
         HEADER
 -->
-<header class="bg-transparent">
-    <nav class="navbar navbar-expand-lg navbar-light bg-transparent text-white sticky-top">
-        <a class="navbar-brand ml-5"  href="#"><img src="images/letterA01.png" height="50" width="50" alt="logo"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end mr-5" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://autterback.greenriverdev.com/305/portfolio/resume.html">Resume</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="https://autterback.greenriverdev.com/305/portfolio/guestbook.html">Guestbook</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-</header> <!-- HEADER NAVIGATION -->
+<nav class="navbar nav-pills navbar-expand-lg navbar-light">
+    <a class="navbar-brand ml-5"  href="https://autterback.greenriverdev.com/305/portfolio/landing.html"><img src="images/logo-portfolio.png" height="150" width="150" alt="logo"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link text-black-50" href="https://autterback.greenriverdev.com/305/portfolio/landing.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-black-50" href="https://autterback.greenriverdev.com/305/portfolio/resume.html">Resume</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-black-50" href="https://autterback.greenriverdev.com/305/portfolio/guestbook.php">Guestbook</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-black-50" href="https://autterback.greenriverdev.com/305/portfolio/admin.php">Admin</a>
+            </li>
+        </ul>
+    </div>
+</nav>
 
 <!--
         JUMBOTRON

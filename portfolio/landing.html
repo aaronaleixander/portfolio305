@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/landing.css">
 
-    <title>Hey o/</title>
+    <title>welcome o/</title>
 </head>
 <body>
 <!--
@@ -47,7 +47,7 @@
         PAGE HEAD / JUMBOTRON
 -->
 
-<div class="jumbotron jumbotron-fluid">
+<div class="jumbotron jumbotron-fluid shadow-lg">
     <div class="container">
     </div>
 </div>
@@ -63,6 +63,10 @@
     </div>
 </div> <!-- Closing div for hero-area container -->
 
+<!--
+        PAGE BODY
+-->
+
 <div class="container mt-5 d-flex justify-content-center">
     <section class="media mb-5 float-left mr-5">
         <a href="https://autterback.greenriverdev.com/305/portfolio/guestbook.php"><img class="d-flex mr-3 img-fluid rounded on-hover" style="width: 100px;" src="images/messageicon2.png" alt="messageIcon"></a>
@@ -70,7 +74,7 @@
             <h2 class="ml-5">Leave a message</h2>
             <p>You can easily get in touch by signing my guestbook.</p>
         </div>
-    </section>
+    </section> <!-- Close section - guestbook link -->
 
     <section class="media mb-5 float-left">
         <a href="https://autterback.greenriverdev.com/305/portfolio/resume.html"><img class="d-flex mr-3 img-fluid rounded on-hover" style="width: 100px;" src="images/resume-icon.png" alt="resumeIcon"></a>
@@ -78,27 +82,52 @@
             <h2 class="ml-3">View my resume</h2>
             <p>Check out my resume while you are here!</p>
         </div>
-    </section>
+    </section> <!-- Section close - resume link -->
+</div><!-- Closing div for page link sections container -->
+
+
+<div class="container-fluid border border-dark shadow projects">
+    <div class="text-center m-5">
+        <h1>P R 0 J E C T S</h1>
+    </div>
 </div>
 
+<div class="container">
+    <a href="https://defnotdevs.greenriverdev.com/305/Sprint/index.php">
+        <div class="card m-3 overlay text-black-50 on-hover border border-dark shadow">
+            <img class="card-img-top" src="images/stjames.png" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title display-4 text-center">St. James Outreach</h5>
+                <p class="card-text">This team collaboration has helped a non-profit organization get in touch with more families who need assistance. Having an online presence has better helped a community in need by creating more accessibility with our online form.</p>
+            </div>
+        </div>
+    </a>
+</div><!-- Closing div projects container -->
+
+<!--
+        PAGE FOOT
+-->
 <footer class="footer">
-    <div class="container text-center">
+    <div class="container mt-5 text-center">
         <div class="row">
             <div class="col-sm">
                 BAS - Software Development   |
-                &copy; 2021
+                GRC
             </div>
             <div class="col-sm">
-                <p class="text-black-50">Made by <img src="images/pixel-heart.png" alt="pixel heart" height="40"> Aaron</p>
+                <p class="text-black-50">aaron <img src="images/pixel-heart.png" alt="pixel heart" height="40"> &copy; 2021</p>
             </div>
             <div class="col-sm">
-                <p><a href="https://twitter.com/"><img class="on-hover" src="images/twitter-icon.png" alt="pixel heart" height="75"></a>
+                <p>
+                    <a href="https://www.linkedin.com/in/aaron-utterback-4b5a351a0/"><img class="on-hover" src="images/l-icon.png" alt="pixel heart" height="50"></a>
+                    <a href="https://twitter.com/"><img class="on-hover" src="images/twitter-icon.png" alt="pixel heart" height="75"></a>
                     <a href="https://github.com/aaronaleixander"><img class="on-hover" src="images/git-icon.png" alt="pixel heart" height="60"></a>
-                    <a href="https://www.instagram.com/"><img class="on-hover" src="images/insta-icon.png" alt="pixel heart" height="50"></a></p>
+                    <a href="https://www.instagram.com/"><img class="on-hover" src="images/insta-icon.png" alt="pixel heart" height="50"></a>
+                </p>
             </div>
         </div>
     </div>
-</footer>
+</footer> <!-- Closing footer tag -->
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
